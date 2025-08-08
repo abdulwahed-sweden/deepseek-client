@@ -12,4 +12,6 @@ pub enum DeepSeekError {
     MissingApiKey,
     #[error("api error {status}: {message}")]
     Api { status: u16, message: String },
+    #[error("insufficient balance (402): please top up your DeepSeek credits")]
+    InsufficientBalance,
 }
